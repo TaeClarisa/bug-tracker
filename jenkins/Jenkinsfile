@@ -36,7 +36,7 @@ pipeline {
                     junit 'bugtracker-backend/test-results.xml'
 
                     //Publish report to Jenkins
-                    publishHtml target: [
+                    publishHTML target: [
                         reportDir: 'bugtracker-backend/reports',
                         reportFiles: 'coverage.html',
                         reportName: 'Backend Coverage Report'
@@ -72,7 +72,7 @@ pipeline {
                         reportName: 'Frontend Coverage Report'
                     ]
                     
-                                    }
+                        }
             }
         }
     }
